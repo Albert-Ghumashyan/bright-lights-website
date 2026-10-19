@@ -382,7 +382,7 @@ footer[id] {
     width: 100%;
     padding: 40px 0;
     position: absolute;
-    bottom: -300px;
+    bottom: -325px;
     z-index: 15;
     box-sizing: border-box;
 }
