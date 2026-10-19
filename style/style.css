@@ -1,0 +1,1083 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1C1B21;
+    color: #fff;
+}
+
+section[id],
+footer[id] {
+    scroll-margin-top: 30px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 150px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.sec-tittle {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.sec-tittle img{
+    width: 64px;
+    height: 31px;
+}
+
+.sec-tittle h1  {
+    font-size: 42px;
+    color: white;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/*====================== Header Style ======================*/
+.header {
+    position: relative;
+    padding: 20px 50px;
+    z-index: 10;
+    background: url('../image/header-image.png') no-repeat center center/cover;
+}
+
+.header-back {  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;       
+    height: 100%;      
+    z-index: 1; 
+    background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(255, 255, 255, 0.12) 35%,
+    rgba(28, 27, 33, 0.55) 70%,
+    rgba(28, 27, 33, 1) 100%
+    );
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.logo img {
+    width: 220px;
+    height: 60px;
+}
+
+.nav-block {
+    position: relative;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 65px;  
+    margin: 0  auto !important;
+    z-index: 25;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu li {
+    list-style: none;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    opacity: 1;
+}
+
+/* Hamburger button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+    z-index: 30;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+
+/*====================== Hero Style ======================*/
+.hero {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    margin: 0 auto !important; 
+    padding-bottom: 40px;
+}
+
+.hero-text .subtitle {
+    font-size: 48px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+     
+}
+
+.hero-text h1 {
+    font-family: Arial, sans-serif;
+    font-size: 100px;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    margin: 0;
+    line-height: 1.1;
+    margin-bottom: 50px;
+}
+
+
+/* ====================== Player Bar ====================== */
+.player-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.playlist-player {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    margin-top: 60px;
+}
+
+/* Play / Pause button */
+.playlist-player .play-btn {
+    width: 32px;
+    height: 36px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.playlist-player .play-btn:hover {
+    color: #B9A8FF;
+    transform: scale(1.05);
+}
+
+.playlist-player .play-icon {
+    display: block;
+    width: 0;
+    height: 0;
+    margin-left: 4px;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 15px solid currentColor;
+}
+
+.playlist-player .pause-icon {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: currentColor;
+    border-radius: 1px;
+}
+
+/* Waveform wrapper */
+.playlist-player .waveform {
+    position: relative;
+    flex: 1 1 auto;
+    min-width: 0;
+    height: 30px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* WaveSurfer-ը թաքցնում ենք, բայց պահում ենք seek-ի համար */
+.playlist-player #waveform {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Տեսանելի գիծը և visualizer-ը */
+#audio-visualizer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* Երգի ժամանակը */
+.playlist-player .time {
+    flex-shrink: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #fff;
+    white-space: nowrap;
+}
+
+/* Ակտիվ երգ */
+.playlist-block-music.active .track-title {
+    color: #7A66CC;
+    font-weight: 600;
+}
+
+/* Սովորական progress bar՝ եթե այլ player-ում օգտագործվում է */
+.progress-container {
+    position: relative;
+    flex: 1;
+    height: 4px;
+    background: #fff;
+    border-radius: 0;
+}
+
+.progress-bar {
+    position: relative;
+    width: 20%;
+    height: 100%;
+    background: #7A66CC;
+    border-radius: 0;
+}
+
+.progress-bar::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 3px;
+    height: 34px;
+    background: #7A66CC;
+    transform: translateY(-50%);
+}
+
+.header-player .waveform {
+    position: relative;
+    flex: 1 1 auto;
+    min-width: 0;
+    height: 30px;
+    overflow: hidden;
+}
+
+.header-player #header-waveform {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.header-player #header-audio-visualizer {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    cursor: pointer;
+    touch-action: none;
+}
+
+.header-player .play-btn {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+.header-player .play-icon {
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    border-left: 20px solid currentColor;
+    margin-left: 4px;
+}
+
+.header-player .pause-icon {
+    display: block;
+    width: 16px;
+    height: 20px;
+    background: currentColor;
+}
+
+
+/*====================== Cards Style ======================*/
+.cards-section {
+    width: 100%;
+    padding: 40px 0;
+    position: absolute;
+    bottom: -300px;
+    z-index: 15;
+    box-sizing: border-box;
+}
+
+.cards-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    width: 31%;
+    height: 300px;
+    background: #1e1e1e;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+    /* Hover + Scroll Reveal */
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease,
+      box-shadow 0.3s ease;
+}
+
+.card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.cards-block .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(122, 102, 204, 0.18);
+}
+
+.cards-block .card:hover img {
+    transform: scale(1.04);
+}
+
+.card-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(90, 80, 160, 0.65);
+    backdrop-filter: blur(0);
+}
+
+.card p {
+    color: #fff;
+    padding: 20px;
+    margin: 0;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+/* Cards appear one after another */
+.cards-block .card:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.cards-block .card:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.cards-block .card:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .cards-block .card:hover {
+    transform: none;
+  }
+
+  .card img {
+    transition: none;
+  }
+}
+
+
+/*====================== About Style ======================*/
+.about {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 320px;
+}
+
+.about-left {
+    width: 48%;
+}
+
+.about-right {
+    width: 38%;
+}
+
+.about-right img {
+    width: 100%;
+
+}
+
+.desc-one {
+    margin-top: 60px;
+}
+
+.desc-second{
+    margin-top: 35px;
+}
+
+.about-desc {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.about-categori {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-categori-block {
+    width: 45%;
+}
+
+.about-categoria-block-content{
+    display: flex;
+    align-items: center;
+}
+
+.cont-m-top {
+    margin-top: 30px;
+}
+
+.category-simbol {
+    background-color: rgba(122, 102, 204, 1);
+    width: 30px;
+    height: 30px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.about-categoria-block-content p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    padding-left: 20px;
+}
+
+
+/*====================== Review Style ======================*/
+.review {
+    position: relative;
+}
+
+.review-image {
+    position: absolute;
+    top: -1px;
+    right: 80px;
+    width: 34%;
+    height: calc(34% + 170px);
+    object-fit: cover; /* Կապահովի, որ նկարը չձգվի կամ չաղավաղվի */
+}
+
+.review-image img {
+    width: 100%;
+}
+
+.review-block{
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 50px 80px;
+}
+
+.cont-space {
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+
+.review-content {
+    width: 60%;
+    position: relative; /* Հիմնական բլոկը դարձնում ենք հենակետ */
+}
+
+.quote-bg {
+    position: absolute;
+    top: 0;
+    left: 0; /* Կարգավորիր ըստ ցանկության */
+    z-index: 1;  /* Ապահովում է, որ լինի հետևում */
+    opacity: 0.8; /* Եթե ուզես ավելի թափանցիկ լինի */
+}
+
+.review-text {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 25px;
+}
+
+.review-line {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 1px;
+}
+
+.review-text-secodn {
+    color: rgba(122, 102, 204, 1);
+      font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+
+/*====================== PlayList Style ======================*/
+.playlist {
+   display: flex;
+   justify-content: space-between;
+}
+
+.playlist-item {
+    width: 45%;
+}
+
+.playlist-iamge {
+    display: flex;
+    align-items: center
+}
+
+.playlist-iamge  img {
+    width: 100%;
+
+}
+
+/* Playlist container */
+.playlist-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 50px;
+    padding-left: 2px;
+}
+
+/* Each track row */
+.playlist-block-music {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    width: 100%;
+    min-height: 20px;
+    cursor: pointer;
+}
+
+/* Track number */
+.track-number {
+    padding-top: 5px;
+    flex: 0 0 28px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #85858A;
+}
+
+/* Track information button */
+.track-info {
+    flex: 1;
+    min-width: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    color: #FFFFFF;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* Track title */
+.track-title {
+    display: block;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.45;
+    color: inherit;
+    transition: color 0.25s ease;
+}
+
+/* Active track */
+.playlist-block-music.active .track-title {
+    color: #7A66CC;
+    font-weight: 600;
+}
+
+/* Hover effect */
+.playlist-block-music:not(.active):hover .track-title {
+    color: #B6A7F0;
+}
+
+.follow-block {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+    margin-top: 50px;
+    color: #fff;
+}
+
+.follow-title {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.follow-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.follow-link span {
+    font-size: 14px;
+}
+
+.follow-link i {
+    font-size: 34px;
+}
+
+.follow-link:hover {
+    color: #7A66CC;
+}
+
+
+/*====================== Gallery Style ======================*/
+.gallery {
+    display: flex;
+    column-gap: 15px;
+    justify-content: space-between;
+}
+
+.mobile-gallery {
+    width: 100%;
+    display: none;
+}
+
+.mobile-galerry-item, .mobile-galerry-item .gallery-item {
+    width: 100%;
+}
+
+.mobile-galerry-item .gallery-item img {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-item-bottom {
+    margin-top: 35px;
+}
+
+
+.mobile-gallery .gallery-item-top{
+    display: flex;
+    gap: 35px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+}
+
+.galery-width{
+    width: 23%;
+}
+
+.galery-width-center {
+    width: 50%;
+}
+
+.gallery-item-center-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery-item-center-top div {
+    width: 48%;
+}
+
+.gallery-item-center-top div img {
+    width: 100%;
+}
+
+.galery-width-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gallery-item-center-bottom {
+    margin-top: 20px;
+    position: relative;
+}
+
+.text-block {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-block p {
+    color: #7A66CC;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+
+/* ====================== GALLERY LIGHTBOX ====================== */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.92);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-image {
+    display: block;
+    width: min(750px, 82vw);
+    height: 75vh;
+    object-fit: contain;
+    border-radius: 10px;
+    transform: scale(0.96);
+    transition: transform 0.3s ease;
+}
+
+.lightbox.is-open .lightbox-image {
+    transform: scale(1);
+}
+
+.lightbox button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 36px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.lightbox button:hover {
+    color: #B9A8FF;
+}
+
+.lightbox-close {
+    top: 20px;
+    right: 28px;
+}
+
+.lightbox-prev {
+    left: 24px;
+}
+
+.lightbox-next {
+    right: 24px;
+}
+
+.section-gallery img {
+    cursor: zoom-in;
+}
+
+
+/*====================== Slider Style ======================*/
+.event-card {
+    background-color: #2F2B2B;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.event-card img {
+  border-top-left-radius:30px;
+  border-bottom-right-radius: 30px;
+   width: 100%;
+   height: 280px;
+}
+
+.event-info {
+    position: relative;
+}
+
+.event-card .event-info{
+    padding: 55px 35px;
+}
+
+.event-info  .place {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #979595;
+}
+
+.event-info h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    margin-top: 15px;
+}
+
+.event-info  .date {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #979595;
+    margin-top: 46px;
+}
+
+.event-info .ticket-btn {
+    color: #979595;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #7A66CC;
+    padding: 18px 52px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.slide-block {
+    position: relative;
+}
+
+/* Սլայդերի սահմանները պահպանվում են */
+.mySwiper {
+    overflow: hidden;
+}
+
+/* Կոճակների ընդհանուր դիզայն */
+.custom-prev,
+.custom-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 40px;
+    height: 60px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #777;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: transparent;
+    color: #999;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.custom-prev span,
+.custom-next span {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.custom-prev {
+    left: -61px;
+}
+
+.custom-next {
+    right: -61px;
+}
+
+.custom-prev:hover,
+.custom-next:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+
+/*====================== Footer Style ======================*/
+.footer-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 45px 0;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-social {
+    margin-top: 35px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; /* Որ մոբայլով նորմալ դասավորվի */
+    justify-content: center;
+}
+
+.footer-social-item {
+    width: 60px;
+    height: 60px;
+    background-color: #7A66CC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 8px solid #2C2C2C;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-sizing: border-box; /* Որ border-ը չխախտի 60px չափսը */
+}
+
+/* Նկարները կլորակի մեջ ճիշտ տեղադրելու համար */
+.footer-social-item img {
+    max-width: 24px;
+    max-height: 24px;
+    display: block;
+}
+
+/* Hover էֆեկտ (սեղմվելու/մոտեցնելու համար) */
+.footer-social-item:hover {
+    transform: scale(1.08);
+    background-color: #6853be;
+}
+
+.footer-last-text {
+    margin-top: 60px; /* 100px-ի փոխարեն ավելի կոկիկ է դիտվում */
+    color: #ffffff;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+.footer-last-text p {
+    text-align: center;
+}

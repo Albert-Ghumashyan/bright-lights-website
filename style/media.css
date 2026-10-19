@@ -1,0 +1,439 @@
+@media (max-width: 1280px) {
+  .container {
+    max-width: 980px;
+  }
+
+  .header {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .nav-block {
+    column-gap: 35px;
+  }
+
+  .nav-menu {
+    gap: 22px;
+  }
+
+  .hero-text h1 {
+    font-size: 80px;
+  }
+
+  .hero-text .subtitle {
+    font-size: 40px;
+  }
+
+  .follow-block {
+    gap: 24px;
+  }
+ 
+  .custom-prev {
+    left: -35px;
+  }
+
+  .custom-next {
+    right: -35px;
+  }
+
+  .event-card .event-info{
+    padding-bottom: 95px;
+    padding-top: 20px;
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+
+  .about-desc{
+    font-size: 14px;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+
+}
+
+@media (max-width: 1024px) {
+   .custom-prev {
+        left: 15px;
+    }
+
+    .custom-next {
+        right: 15px;
+    }
+
+    .swiper {
+      width: 85%;
+    }
+
+    .event-info h3{
+      font-size: 15px;
+    }
+
+    .event-info .date{
+      font-size: 14px;
+    }
+
+    .about-right img {
+      width: 100%;
+      height: 50%;
+    }
+
+    .sec-tittle h1 {
+      font-size: 25px;
+    }
+
+    .playlist-player {
+       margin-top: 35px;
+    }
+
+    .track-title {
+       font-size: 14px
+    }
+
+    .playlist-block {
+      column-gap: 15px
+    }
+
+    .follow-block{
+      column-gap: 10px;
+    }
+
+    .review-content {
+      width: 55%;
+    }
+
+    .review-image {
+        top: 35px;
+    }
+
+     .review-image {
+        position: absolute;
+        top: 50%;
+        right: 45px;
+        transform: translateY(-50%);
+        width: 34%;
+        height: calc(50% + 170px);
+        object-fit: cover;
+     }
+
+
+     .follow-link i {
+      font-size: 24px;
+     }
+
+     .follow-title {
+      font-size: 20px;
+     }
+
+     .container {
+    margin: 115px auto;
+     }
+
+     .about {
+      margin-top: 420px;
+     }
+       
+
+   .review-text{
+    font-size: 16px;
+   }
+
+   .review-block {
+    padding: 50px 30px;
+   }
+
+   .review-image img {
+       width: 100%;
+       height: 100%;
+   }
+}
+
+
+@media (max-width: 768px) {
+  .follow-block {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+    .custom-prev {
+        left: 20px;
+    }
+
+    .custom-next {
+        right: 20px;
+    }
+
+   .swiper {
+      width: 85%;
+    }
+
+  .follow-title {
+    width: 100%;
+    font-size: 28px;
+  }
+
+  .follow-link {
+    gap: 10px;
+    font-size: 18px;
+  }
+
+  .follow-link i {
+    font-size: 26px;
+  }
+
+  .playlist-block {
+    gap: 18px;
+    margin-top: 25px;
+  }
+
+  .playlist-block-music {
+    gap: 16px;
+  }
+
+  .track-number {
+    flex-basis: 24px;
+    font-size: 16px;
+  }
+
+  .track-title {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-block {
+        justify-content: space-between;
+        padding: 10px 20px;
+        column-gap: 0;
+    }
+
+    .logo img {
+        width: 170px;
+        height: auto;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 20px;
+        right: 20px;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 20px;
+        background: #2F2B2B;
+        border-radius: 12px;
+        z-index: 30;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li a {
+        display: block;
+        padding: 12px 0;
+        font-size: 17px;
+    }
+ 
+  .cards-block{
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+ }
+
+
+     .container {
+        margin: 95px auto;
+    }
+  .card {
+    position: relative;
+    width: 45%;
+ }
+
+ .cards-section{
+  bottom: -600px;
+ }
+
+     .about {
+        margin-top: 715px;
+        flex-direction: column;
+    }
+
+    .desc-one {
+    margin-top: 35px;
+}
+
+.about-categori {
+    margin-top: 40px;
+  }
+
+    .about-left, .about-right{
+      width: 100%;
+    }
+
+     .about-right{
+      margin-top: 45px;
+     }
+
+      .review-block {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 24px;
+        gap: 30px;
+    }
+
+    .review-content {
+        width: 100%;
+    }
+
+    .review-image {
+        position: static;
+        transform: none;
+        width: 100%;
+        height: auto;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .mobile-gallery .gallery-item-top {
+    display: flex;
+    gap: 20px;
+   }
+
+   .gallery-item-bottom {
+    margin-top: 20px;
+   }
+
+   .text-block p {
+  font-size: 18px; 
+  }
+
+    .review-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+
+    .cont-space{
+      padding-top: 0;
+      padding-bottom: 0 ;
+    }
+
+    .playlist{
+      flex-direction: column-reverse;
+    }
+
+    .playlist-item{
+      width: 100%;
+    }
+
+    .playlist-iamge  {
+      margin-top: 35px;
+    }
+
+    .swiper{
+      width: 75%;
+    }
+
+    .custom-next {
+        right: 35px;
+    }
+
+        .custom-prev {
+        left: 35px;
+    }
+
+    .mobile-gallery{
+      display: block;
+    }
+
+    .desktop-gallery{
+      display: none;
+    }
+}
+
+@media (max-width: 600px) {
+  .playlist-player {
+    gap: 8px;
+  }
+
+  .swiper {
+        width: 68%;
+    }
+
+
+  .playlist-player .play-btn {
+    flex-basis: 26px;
+    width: 26px;
+  }
+
+  .playlist-player .waveform {
+    max-width: none;
+    height: 28px;
+  }
+
+  .playlist-player .time {
+    font-size: 12px;
+  }
+
+    .lightbox {
+        padding: 20px;
+    }
+
+    .lightbox-image {
+        max-width: 88vw;
+        max-height: 75vh;
+    }
+
+    .lightbox-prev {
+        left: 8px;
+    }
+
+    .lightbox-next {
+        right: 8px;
+    }
+
+    .lightbox button {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 528px) {
+      .card {
+        width: 100%;
+      }
+
+        .custom-prev,
+    .custom-next {
+        display: none;
+
+      }
+
+          .swiper {
+        width: 100%;
+    }
+
+          .hero-text h1 {
+        font-size: 65px;
+    }
+
+        .hero-text .subtitle {
+        font-size: 28px;
+    }
+    .cards-section {
+        bottom: -910px;
+    }
+
+        .about {
+        margin-top: 1025px;
+        }
+}

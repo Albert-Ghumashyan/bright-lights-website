@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figma Music</title>
+    <link rel="icon" type="image/png" href="image/favicon.png">
+    <link rel="stylesheet" href="style/style.css"/>
+    <link rel="stylesheet" href="style/font.css" />
+    <link rel="stylesheet" href="style/media.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-back"></div>
+      <nav class="container nav-block">
+        <div class="logo">
+          <a href="##">
+            <img src="image/logo.png" alt="Bright Lights" />
+          </a>
+        </div>
+        <button class="menu-toggle" type="button"
+        aria-label="Open navigation"
+        aria-expanded="false">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+        <ul class="nav-menu">
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#news">News</a>
+          </li>
+          <li>
+            <a href="#music">Music</a>
+          </li>
+          <li>
+            <a href="#media">Media</a>
+          </li>
+          <li>
+            <a href="#tours">Tours</a>
+          </li>
+          <li>
+            <a href="#contacts">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <div class="hero-text">
+            <span class="subtitle">New Single</span>
+            <h1>War For Love</h1>
+          </div>
+          <!-- Player bar mock -->
+          <div class="player-bar playlist-player header-player" id="header-player">
+            <button class="play-btn" id="header-play-btn" type="button" aria-label="Play">
+              <span class="play-icon"></span>
+            </button>
+          <div class="waveform">
+            <div id="header-waveform"></div>
+            <canvas id="header-audio-visualizer"></canvas>
+          </div>
+            <span class="time" id="header-time">00:00-00:00</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="cards-section" id="news">
+        <div class="container cards-block">
+          <div class="card">
+            <img src="image/header-card-image-1.png" alt="image-card" />
+            <div class="card-text">
+              <p>
+                Working on my upcoming full-length album that's releasing later
+                this year.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="image/header-card-image-2.png" />
+            <div class="card-text">
+              <p>Halloween vibes. <br />Listen my new track!</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="image/header-card-image-3.png" />
+            <div class="card-text">
+              <p>WarforLove is OUT NOW! <br />Stream it here.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-about" id="about">
+        <div class="about container">
+          <div class="about-left">
+            <div class="sec-tittle">
+              <img src="image/icon-title.png" />
+              <h1>Bright Lights</h1>
+            </div>
+            <p class="about-desc desc-one">
+              Bright Lights is a multi-Grammy nominated singer, songwriter, DJ and
+              record producer. She has written for numerous
+            </p>
+            <p class="about-desc desc-second">
+              pop stars including Britney Spears, Justin Bieber, Usher and
+              Beyoncé. Her catalog has amassed over 1 billion streams worldwide.
+              More than 100 million of those streams can be attributed to her
+              artist career and include such hits as Porter Robinson's "Language,"
+              3LAU's "How You Love Me" and her own single "Runaway." She was also
+              a featured vocalist on Zedd's #1 Clarity album. Her latest music
+              video, "Put It Down," reached 1 million streams in the first week,
+              releasing independently. Bright Lights is currently in the studio
+              working on a self-produced album slated for release in 2020.
+            </p>
+            <div class="about-categori">
+              <div class="about-categori-block">
+                <div class="about-categoria-block-content">
+                  <div class="category-simbol"></div>
+                  <p>Based in: Los Angeles</p>
+                </div>
+                <div class="about-categoria-block-content cont-m-top">
+                  <div class="category-simbol"></div>
+                  <p>Genre: #DancePop</p>
+                </div>
+              </div>
+              <div class="about-categori-block">
+                <div class="about-categoria-block-content">
+                  <div class="category-simbol"></div>
+                  <p>Founded in 2011</p>
+                </div>
+                <div class="about-categoria-block-content cont-m-top">
+                  <div class="category-simbol"></div>
+                  <p>Label: 333 Recordings</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-right">
+            <img src="image/img-about.png" />
+          </div>
+        </div>
+      </section>
+      <section class="section-review" >
+        <div class="review container cont-space">
+          <div class="review-block">
+            <div class="review-image">
+              <img src="image/review-img.png" />
+            </div>
+            <div class="review-content">
+              <!-- Չակերտը կամ նկարը գրում ենք առաջինը, որ լինի հետևում -->
+              <div class="quote-bg">
+                <img src="image/quot.png" />
+              </div>
+
+              <!-- Տեքստը գրում ենք հետո, որ լինի վերևում -->
+              <p class="review-text">
+                “In an age where mainstream music is designed to be as easily
+                consumed as possible, listening to Bright Lights is refreshing, to
+                say the least. Her sound is perfect for radio but complex enough
+                to separate her from other pop newcomers.”
+              </p>
+
+              <div class="review-line"></div>
+              <p class="review-text-secodn">PopULove.net</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-playlist" id="music">
+        <div class="playlist container">
+          <div class="playlist-iamge playlist-item">
+            <img src="image/playlist-image.png">
+          </div>
+          <div class="playlist-music playlist-item">
+             <div class="sec-tittle">
+               <img src="image/icon-title.png" />
+               <h1>Last tracks</h1> 
+             </div>
+             <!-- Player bar mock -->
+             <div class="player-bar playlist-player">
+               <button class="play-btn" type="button" aria-label="Play">
+                 <span class="play-icon"></span>
+               </button>
+               <div class="waveform">
+                 <div id="waveform"></div>
+                 <canvas id="audio-visualizer"></canvas>
+               </div>
+               <span class="time">00:00-00:00</span>
+             </div>
+             <!-- Player bar music -->     
+             <div class="playlist-block">
+              <div class="playlist-block-music active" data-track="0">
+                <span class="track-number">01</span>
+                <button class="track-info" type="button">
+                  <span class="track-title">
+                    3LAU, Bright Lights — How You Love Me
+                  </span>
+                </button>
+              </div>
+              <div class="playlist-block-music" data-track="1">
+                <span class="track-number">02</span>
+                <button class="track-info" type="button">
+                  <span class="track-title">
+                    Bright Lights, Kaleena Zanders, Kandy — War For Love
+                  </span>
+                </button>
+              </div>
+              <div class="playlist-block-music" data-track="2">
+                <span class="track-number">03</span>
+                <button class="track-info" type="button">
+                  <span class="track-title">
+                    Pink Is Punk, Benny Benassi, Bright Lights — Ghost
+                  </span>
+                </button>
+              </div>
+              <div class="playlist-block-music" data-track="3">
+                <span class="track-number">04</span>
+
+                <button class="track-info" type="button">
+                  <span class="track-title">
+                    Hardwell, Dyro, Bright Lights — Never Say Goodbye
+                  </span>
+                </button>
+              </div>
+              <div class="playlist-block-music" data-track="4">
+                <span class="track-number">05</span>
+                <button class="track-info" type="button">
+                  <span class="track-title">
+                    Zeds Dead, Dirtyphonics, Bright Lights — Where Are You Now
+                  </span>
+                </button>
+              </div>
+              <div class="playlist-block-music" data-track="5">
+                <span class="track-number">06</span>
+                <button class="track-info" type="button">
+                  <span class="track-title">
+                    Zedd, Bright Lights — Follow You Down
+                  </span>
+                </button>
+              </div>
+             </div>
+             <div class="follow-block">
+              <h3 class="follow-title">Follow me:</h3>
+
+              <a
+                href="https://open.spotify.com/"
+                class="follow-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Spotify"
+              >
+                <i class="fa-brands fa-spotify"></i>
+                <span>Spotify</span>
+              </a>
+
+              <a
+                href="https://music.apple.com/"
+                class="follow-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="iTunes"
+              >
+                <i class="fa-brands fa-apple"></i>
+                <span>iTunes</span>
+              </a>
+             </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-gallery" id="media">
+          <div class="gallery container desktop-gallery">
+             <div class="gallery-item galery-width">
+                  <img src="image/gallery-img-1.png">
+             </div>
+             <div class="gallery-item galery-width-center">
+                 <div class="gallery-item-center-top">
+                      <div >
+                         <img src="image/gallery-img-3.png">
+                      </div>
+                      <div>
+                         <img src="image/gallery-img-4.png">
+                      </div>
+                 </div>
+                 <div class="gallery-item-center-bottom">
+                    <div class="img-block">
+                       <img src="image/gallery-img-5.png">
+                    </div>
+                    <div class="text-block">
+                        <p>EDC Las Vegas Mainstage</p>
+                    </div>
+                 </div>
+             </div>
+             <div class="gallery-item galery-width">
+                <img src="image/gallery-img-2.png">
+             </div>
+          </div>
+
+          <div class="mobile-gallery container">
+             <div class="mobile-galerry-item gallery-item-top">
+                <div class="gallery-item galery-width">
+                  <img src="image/gallery-img-1.png">
+                </div>
+                <div class="gallery-item galery-width">
+                  <img src="image/gallery-img-2.png">
+                 </div>
+             </div>
+             <div class="mobile-galerry-item gallery-item-bottom">
+                <div class="gallery-item galery-width-center">
+                    <div class="gallery-item-center-top">
+                          <div >
+                            <img src="image/gallery-img-3.png">
+                          </div>
+                          <div>
+                            <img src="image/gallery-img-4.png">
+                          </div>
+                    </div>
+                    <div class="gallery-item-center-bottom">
+                        <div class="img-block">
+                          <img src="image/gallery-img-5.png">
+                        </div>
+                        <div class="text-block">
+                            <p>EDC Las Vegas Mainstage</p>
+                        </div>
+                    </div>
+                </div>
+             </div>
+          </div>
+             
+  
+
+          <div class="lightbox" id="gallery-lightbox" aria-hidden="true">
+            <button class="lightbox-close" type="button" aria-label="Փակել">&times;</button>
+            <button class="lightbox-prev" type="button" aria-label="Նախորդ նկար">&#10094;</button>
+            <img class="lightbox-image" src="" alt="Gallery image">
+            <button class="lightbox-next" type="button" aria-label="Հաջորդ նկար">&#10095;</button>
+          </div>
+      </section>
+      <section class="section-slider" id="tours">
+        <div class="slide-block container">
+          <div class="swiper mySwiper">
+            <!-- Swiper Wrapper -->
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="event-card">
+                  <img src="image/slider-img-1.png" alt="event">
+                  <div class="event-info">
+                    <span class="place">Chandler, AZ</span>
+                    <h3>The Park at Wild Horse Pass</h3>
+                    <a href="#" class="ticket-btn">TICKETS</a>
+                    <span class="date">Apr 02 2021</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="event-card">
+                  <img src="image/slider-img-2.png" alt="event">
+                  <div class="event-info">
+                    <span class="place">Ibiza, IBZ</span>
+                    <h3>Swag Ibiza Club</h3>
+                    <a href="#" class="ticket-btn">TICKETS</a>
+                    <span class="date">Jul 08 2021</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="event-card">
+                  <img src="image/slider-img-3.png" alt="event">
+                  <div class="event-info">
+                    <span class="place">Ibiza, IBZ</span>
+                    <h3>El Swing Ibiza</h3>
+                    <a href="#" class="ticket-btn">TICKETS</a>
+                    <span class="date">Jul 10 2021</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="event-card">
+                  <img src="image/slider-img-4.jpeg" alt="EDC Mexico music festival">
+                  <div class="event-info">
+                    <span class="place">Mexico City, MX</span>
+                    <h3>EDC Mexico</h3>
+                    <a href="#" class="ticket-btn">TICKETS</a>
+                    <span class="date">Feb 20–22 2026</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="event-card">
+                  <img src="image/slider-img-5.jpeg" alt="event">
+                  <div class="event-info">
+                    <span class="place">Boom, Belgium</span>
+                    <h3>Tomorrowland</h3>
+                    <a href="#" class="ticket-btn">TICKETS</a>
+                    <span class="date">July 15-17 2026</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="event-card">
+                  <img src="image/slider-img-6.jpeg" alt="event">
+                  <div class="event-info">
+                    <span class="place">Las Vegas, US</span>
+                    <h3>EDC Las Vegas</h3>
+                    <a href="#" class="ticket-btn">TICKETS</a>
+                    <span class="date">Jul 10 2021</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+           <!-- Navigation buttons՝ swiper-ից դուրս -->
+          <button class="custom-prev" type="button" aria-label="Previous slide">
+            <span>←</span>
+          </button>
+          <button class="custom-next" type="button" aria-label="Next slide">
+            <span>→</span>
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="contacts">
+      <div class="footer-block container">
+        <div class="footer-logo">
+          <img src="image/footer-logo.png" alt="Bright Lights Logo">
+        </div>
+        <div class="footer-social">
+          <a href="#" class="footer-social-item" aria-label="Apple/iPhone">
+            <img src="image/iphone-icon.png" alt="Apple">
+          </a>
+          <a href="#" class="footer-social-item" aria-label="Shopify">
+            <img src="image/shopify-icon.png" alt="Shopify">
+          </a>
+          <a href="#" class="footer-social-item" aria-label="Instagram">
+            <img src="image/instagram-icon.png" alt="Instagram">
+          </a>
+          <a href="#" class="footer-social-item" aria-label="YouTube">
+            <img src="image/youtube-icon.png" alt="YouTube">
+          </a>
+          <a href="#" class="footer-social-item" aria-label="Twitter">
+            <img src="image/twinter-icon.png" alt="Twitter">
+          </a>
+          <a href="#" class="footer-social-item" aria-label="Facebook">
+            <img src="image/facebook-icon.png" alt="Facebook">
+          </a>
+        </div>
+        <div class="footer-last-text">
+          <p>© 2020 DJ bright lights.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js@7"></script>
+    <script src="script/script.js"></script>
+  </body>
+</html>
