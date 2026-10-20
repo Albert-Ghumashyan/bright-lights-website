@@ -380,7 +380,7 @@ footer[id] {
 /*====================== Cards Style ======================*/
 .cards-section {
     width: 100%;
-    padding: 40px 0;
+    margin: 40px 0;
     position: absolute;
     bottom: -325px;
     z-index: 15;
